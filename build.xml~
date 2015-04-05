@@ -1,0 +1,34 @@
+<project name="moto" default="package" basedir=".">
+
+<property file = "build.properties"/>
+
+     <target name="clean" depends="copy_files">
+        <delete file="moto.jar" dir="classes"/>
+     </target>
+
+     <target name = "copy_files">
+<echo message = "Operating System: ${OS}"/>
+<echo message = "Version Control System: ${VCS}"/>
+<echo message = "BuildTool: ${BT}"/>
+<echo message = "CI: ${CI}"/> 
+        <mkdir dir = "binaries"/>
+           <copy todir = "binaries/">
+              <fileset dir = "trunk/">
+                 <include name = "**/*.java"/>
+              </fileset>
+           </copy>
+     </target>
+
+
+     <target name="compilation" depends="clean">
+            <mkdir dir="classes"/>
+         <javac srcdir="binaries" destdir="classes"/>
+     </target>
+
+
+     <target name="package" depends="compilation">
+         <jar basedir="classes" destfile="moto.jar"/>
+     </target>
+
+</project>
+
