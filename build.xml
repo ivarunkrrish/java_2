@@ -13,7 +13,7 @@
 <echo message = "CI: ${CI}"/> 
         <mkdir dir = "binaries"/>
            <copy todir = "binaries/">
-              <fileset dir = "trunk/">
+              <fileset dir = ".">
                  <include name = "**/*.java"/>
               </fileset>
            </copy>
