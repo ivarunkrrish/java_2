@@ -1,3 +1,5 @@
+//This is a Main program of Moto G project in Git VCS
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
