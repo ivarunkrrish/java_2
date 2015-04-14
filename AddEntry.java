@@ -1,3 +1,4 @@
+// This is a Java Program
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
